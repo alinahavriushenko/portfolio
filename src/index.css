@@ -1,13 +1,140 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fced;
+  margin: 0;
+}
+
+fun {
+  color: #4b3a42 #e7e3d0 #414a67 #f9fced #9a7d87 #c9a9a6 #d1caba;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  top: 0;
+  width: 100%;
+  background-color: #f9fced;
+}
+
+.social-icons {
+  display: flex;
+  padding-right: 25px;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #414a67;
+}
+
+/* about */
+
+#about--image {
+  width: 150px; /* Adjust the width to your preferred size */
+  height: 150px; /* Ensure the height matches the width to make it a circle */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about {
+  margin-top: 80px;
+}
+
+.about--text {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.about--text h1 {
+  font-size: 25px;
+}
+
+.about--text h2 {
+  font-size: 20px;
+}
+
+/* skills */
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  color: #414a67;
+  padding: 0;
+  font-weight: 600;
+}
+
+.skills--container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.skills--icon {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/* project */
+
+.project--card {
+}
+
+.project--text {
+  text-align: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #9a7d87; /* Primary button color */
+  color: #fff; /* Text color for primary button */
+}
+
+.button--second {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #4b3a42;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #333; /* Text color for secondary button */
 }
