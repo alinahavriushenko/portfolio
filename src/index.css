@@ -15,18 +15,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-ul,
-li {
+nav li {
   list-style: none;
-  padding: 0;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-ul {
+nav li:hover {
+  color: orange;
+}
+
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 20px;
+  margin-left: 15px;
+  list-style: none;
+  padding: 0;
 }
 
 header {
@@ -41,10 +48,10 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-
   top: 0;
   width: 100%;
   background-color: #f9fced;
+  height: 100px;
 }
 
 .social-icons {
@@ -53,17 +60,24 @@ header {
   gap: 20px;
 }
 
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: orange;
+}
+
 .social-icons a {
   color: #414a67;
+  transition: all 0.2s ease-in-out;
 }
 
 /* about */
 
 #about--image {
-  width: 150px; /* Adjust the width to your preferred size */
-  height: 150px; /* Ensure the height matches the width to make it a circle */
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 100px;
 }
 
 .about {
@@ -73,14 +87,18 @@ header {
 .about--text {
   text-align: left;
   margin-top: 30px;
+  padding-left: 15px;
+  text-wrap: balance;
+  width: fit-content;
 }
 
 .about--text h1 {
   font-size: 25px;
 }
 
-.about--text h2 {
+.about--text h3 {
   font-size: 20px;
+  width: fit-content;
 }
 
 /* skills */
@@ -91,6 +109,13 @@ header {
   color: #414a67;
   padding: 0;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.skill:hover {
+  color: orange;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .skills--container {
@@ -108,10 +133,35 @@ header {
 /* project */
 
 .project--card {
+  margin-bottom: 15px;
 }
 
 .project--text {
   text-align: left;
+  padding: 15px;
+}
+
+.project--title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.tools--icon {
+  font-size: 25px;
+  padding-right: 10px;
+  color: #c9a9a6;
+}
+
+.tools--icon:hover {
+  color: #414a67;
+}
+
+.project--buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
 .button {
@@ -120,21 +170,110 @@ header {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: #9a7d87; /* Primary button color */
-  color: #fff; /* Text color for primary button */
+  background-color: #414a67;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: orange;
 }
 
 .button--second {
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid #4b3a42;
+  border: 1px solid #414a67;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: #333; /* Text color for secondary button */
+  transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: #414a67;
+}
+
+.button--second:hover {
+  color: orange;
+  border: 1.5px solid orange;
+}
+
+.project--screenshot {
+  height: auto;
+  width: 100%;
+}
+
+.contact--container {
+  margin: 50px 0;
+}
+
+.connect {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 1em solid orange;
+  white-space: nowrap;
+  animation: typing 2s steps(15, end), blink-caret 1.5s step-end infinite;
+  width: 17ch;
+  line-height: 1px;
+}
+
+@keyframes typing {
+  from {
+    width: 3ch;
+  }
+  to {
+    width: 17ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  40% {
+    border-color: orange;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    padding: 0 20%;
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 200px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  #about--image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    max-width: 150px;
+    margin-top: 60px;
+  }
+
+  .sticky {
+    width: 60%;
+  }
+
+  .skills--container {
+    justify-content: space-between;
+    margin: 85px 0;
+  }
 }
