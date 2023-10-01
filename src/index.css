@@ -73,11 +73,12 @@ header {
 /* about */
 
 #about--image {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 100px;
+  margin-top: 70px;
+  margin-bottom: 40px;
 }
 
 .about {
@@ -99,6 +100,15 @@ header {
 .about--text h3 {
   font-size: 20px;
   width: fit-content;
+}
+
+.linkedin {
+  text-decoration: none;
+  color: #fff;
+  background-color: orange;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 /* skills */
@@ -263,8 +273,8 @@ header {
   #about--image {
     border-radius: 50%;
     object-fit: cover;
-    width: 100%;
-    max-width: 150px;
+    width: 300px;
+    height: 300px;
     margin-top: 60px;
   }
 
