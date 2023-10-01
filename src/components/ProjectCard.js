@@ -29,7 +29,7 @@ export default function ProjectCard(props) {
                 </div>
                 <p>{props.description}</p>
                 </div>
-                <img src={`images/${props.img}`} className="project--screenshot"/>
+                <img src={`images/${props.img}`} className="project--screenshot" alt="{props.title}"/>
             </div>
             </div>
     )
